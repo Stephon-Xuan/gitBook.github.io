@@ -1,0 +1,65 @@
+{
+    "title" : "Stephon-Xuan博客",
+    "author" : "Stephon-Xuan",
+    "description" : "Stephon-Xuan gitbook博客",
+    "language" : "zh-hans",
+    "plugins": [
+        "github", 
+        "expandable-chapters",
+        "splitter",
+        "-lunr", 
+        "-search", 
+        "search-pro",
+        "copy-code-button",
+        "back-to-top-button",
+        "tbfed-pagefooter",
+        "-sharing", "sharing-plus",
+        "chapter-fold",
+        "pageview-count",
+        "popup",
+        "page-toc-button",
+        "theme-comscore"
+    ],
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/Stephon-Xuan"
+        },
+        "tbfed-pagefooter": {
+            "copyright":"",
+            "modify_label": "Last Modified On：",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+        },
+        "sharing": {
+            "douban": false,
+            "facebook": false,
+            "google": false,
+            "hatenaBookmark": false,
+            "instapaper": false,
+            "line": false,
+            "linkedin": false,
+            "messenger": false,
+            "pocket": false,
+            "qq": true,
+            "qzone": false,
+            "stumbleupon": false,
+            "twitter": false,
+            "viber": false,
+            "vk": false,
+            "weibo": false,
+            "whatsapp": false,
+            "all": [
+                "facebook", "google", "twitter",
+                "weibo", "qq", "linkedin",
+                "qzone", "douban"
+            ]
+        },
+        "simple-page-toc": {
+            "maxDepth": 3,
+            "skipFirstH1": true
+       },
+       "page-toc-button": {
+        "maxTocDepth": 2,
+        "minTocSize": 2
+       }
+    }
+}
