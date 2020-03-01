@@ -1,26 +1,26 @@
-language: node_js # ¹¹½¨ËùĞèµÄÓïÑÔ»·¾³
+language: node_js # æ„å»ºæ‰€éœ€çš„è¯­è¨€ç¯å¢ƒ
 node_js:
-  - "v11.14.0"  # ¶ÔÓ¦µÄ°æ±¾
+  - "v11.14.0"  # å¯¹åº”çš„ç‰ˆæœ¬
 branches:
   only:
-  - master    # ¹¹½¨µÄ·ÖÖ§
+  - master    # æ„å»ºçš„åˆ†æ”¯
 #cache:
   #directories:
-  #- node_modules # ÒÀÀµ»º´æµÄÄ¿Â¼
+  #- node_modules # ä¾èµ–ç¼“å­˜çš„ç›®å½•
 before_install:
-- export TZ='Asia/Shanghai'  # ÉèÖÃÊ±Çø
+- export TZ='Asia/Shanghai'  # è®¾ç½®æ—¶åŒº
 install:
- - npm install -g gitbook-cli # °²×°±àÒë¹¤¾ß
+ - npm install -g gitbook-cli # å®‰è£…ç¼–è¯‘å·¥å…·
 script:
-#ÏëÓÃ×Ô¼º×Ô¶¨ÒåµÄ²å¼şÊ±£¬°Ñ×Ô¼ºµÄnode_modulsÉÏ´«µ½github,²¿ÊğÊ±²»ÓÃÔÙ´Îgitbook install
-#»òÕß±£Áô×Ô¼ºµÄ²å¼şµ½node_modulsÀï£¬ÆäËû²å¼şÀûÓÃmpm install gitbook-pluins-°ü °²×°
+#æƒ³ç”¨è‡ªå·±è‡ªå®šä¹‰çš„æ’ä»¶æ—¶ï¼ŒæŠŠè‡ªå·±çš„node_modulsä¸Šä¼ åˆ°github,éƒ¨ç½²æ—¶ä¸ç”¨å†æ¬¡gitbook install
+#æˆ–è€…ä¿ç•™è‡ªå·±çš„æ’ä»¶åˆ°node_modulsé‡Œï¼Œå…¶ä»–æ’ä»¶åˆ©ç”¨mpm install gitbook-pluins-åŒ… å®‰è£…
 # - gitbook install 
 - gitbook build
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: $GH_TOKEN # github ÉÏµÄtoken»·¾³±äÁ¿
-  local-dir: ./_book/ ## ¸ù¾İÇé¿ö×Ô¶¨Òåµ½¾²Ì¬ÎÄ¼şÊä³öÄ¿Â¼
+  github-token: $GH_TOKEN # github ä¸Šçš„tokenç¯å¢ƒå˜é‡
+  local-dir: ./_book/ ## æ ¹æ®æƒ…å†µè‡ªå®šä¹‰åˆ°é™æ€æ–‡ä»¶è¾“å‡ºç›®å½•
   target-branch: gh-pages
   verbose: true
   on:
